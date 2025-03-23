@@ -1,0 +1,141 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container  */
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    width: 450px;
+    text-align: center;
+    animation: fadeIn 1s ease;
+}
+
+/* Título */
+h1 {
+    margin-bottom: 20px;
+    color: #5d3b8c;
+    font-weight: 600;
+}
+
+/* Formulário */
+form {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 85%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #a18cd1;
+    outline: none;
+    box-shadow: 0 0 5px rgba(161, 140, 209, 0.5);
+}
+
+/* Botão principal */
+button[type="submit"] {
+    padding: 12px 25px;
+    border: none;
+    background-color: #a18cd1;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #5d3b8c;
+}
+
+/* Lista */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+li:hover {
+    background-color: #f1f1f1;
+    transform: translateY(-2px);
+}
+
+li.completed {
+    background-color: #e0ffe0;
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+li div {
+    max-width: 70%;
+}
+
+/* Botões dentro da lista */
+li button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 18px;
+    transition: transform 0.2s;
+}
+
+li button:hover {
+    transform: scale(1.2);
+}
+
+.edit-btn {
+    color: #2196F3;
+}
+
+.delete-btn {
+    color: #f44336;
+}
+
+li button:first-of-type {
+    color: #4CAF50;
+}
+
+/* Animação */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

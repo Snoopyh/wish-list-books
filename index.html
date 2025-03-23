@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD - Lista de Livros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Livros a Comprar</h1>
+        
+        <!-- Formulário -->
+        <form id="book-form">
+            <input type="text" id="book-name" placeholder="Nome do Livro" required />
+            <input type="text" id="book-author" placeholder="Autor" required />
+            <input type="text" id="book-genre" placeholder="Gênero" required />
+            <input type="url" id="book-link" placeholder="Link para Compra" required />
+            <button type="submit" id="button">Salvar Livro</button>
+        </form>
+        
+        <!-- Lista -->
+        <ul id="book-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
