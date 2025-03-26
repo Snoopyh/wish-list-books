@@ -1,9 +1,9 @@
 const API_URL = 'https://api-mongodb-dtnl.onrender.com/v1/books/'; // Troque para sua API real
 let editingId = null;
-// Carregar livros ao abrir
+
 window.onload = () => fetchBooks();
 
-// Listar (GET)
+
 function fetchBooks() {
     fetch(API_URL)
         .then(res => res.json())
@@ -11,7 +11,7 @@ function fetchBooks() {
         .catch(err => console.error('Erro ao carregar livros:', err));
 }
 
-// Renderizar lista
+
 function renderBooks(books) {
     const bookList = document.getElementById('book-list');
     bookList.innerHTML = '';
@@ -24,20 +24,18 @@ function renderBooks(books) {
         info.innerHTML = `<strong>${book.title}</strong><br>Autor: ${book.author}<br>Gênero: ${book.genre}<br><a href="${book.url}" target="_blank">Comprar</a>`;
         li.appendChild(info);
 
-        // Botão completar
         const completeBtn = document.createElement('button');
         completeBtn.textContent = '✔️';
         completeBtn.addEventListener('click', () => toggleComplete(book.id, book.completed));
         li.appendChild(completeBtn);
 
-        // Editar
+    
         const editBtn = document.createElement('button');
         editBtn.textContent = '✏️';
         editBtn.classList.add('edit-btn');
         editBtn.addEventListener('click', () => fillForm(book));
         li.appendChild(editBtn);
 
-        // Deletar
         const deleteBtn = document.createElement('button');
         deleteBtn.textContent = '🗑️';
         deleteBtn.classList.add('delete-btn');
@@ -48,7 +46,6 @@ function renderBooks(books) {
     });
 }
 
-// Enviar formulário (Create ou Update)
 document.getElementById('book-form').addEventListener('submit', function(e) {
     e.preventDefault();
 
@@ -60,7 +57,6 @@ document.getElementById('book-form').addEventListener('submit', function(e) {
     };
 
     if (editingId) {
-        // Update
         fetch(`${API_URL}update/${editingId}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
@@ -84,7 +80,6 @@ document.getElementById('book-form').addEventListener('submit', function(e) {
     }
 });
 
-// Editar (preencher formulário)
 function fillForm(book) {
     document.getElementById('book-name').value = book.title;
     document.getElementById('book-author').value = book.author;
@@ -113,7 +108,6 @@ function toggleComplete(id, completed) {
       .catch(err => console.error('Erro ao atualizar status:', err));
 }
 
-// Limpar form
 function clearForm() {
     document.getElementById('book-name').value = '';
     document.getElementById('book-author').value = '';

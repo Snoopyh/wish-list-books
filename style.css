@@ -14,7 +14,7 @@ body {
     height: 100vh;
 }
 
-/* Container  */
+
 .container {
     background-color: #ffffff;
     padding: 30px;
@@ -25,14 +25,14 @@ body {
     animation: fadeIn 1s ease;
 }
 
-/* Título */
+
 h1 {
     margin-bottom: 20px;
     color: #5d3b8c;
     font-weight: 600;
 }
 
-/* Formulário */
+
 form {
     margin-bottom: 20px;
 }
@@ -52,7 +52,6 @@ input:focus {
     box-shadow: 0 0 5px rgba(161, 140, 209, 0.5);
 }
 
-/* Botão principal */
 button[type="submit"] {
     padding: 12px 25px;
     border: none;
@@ -68,7 +67,7 @@ button[type="submit"]:hover {
     background-color: #5d3b8c;
 }
 
-/* Lista */
+
 ul {
     list-style-type: none;
     padding: 0;
@@ -102,7 +101,7 @@ li div {
     max-width: 70%;
 }
 
-/* Botões dentro da lista */
+
 li button {
     background-color: transparent;
     border: none;
@@ -128,7 +127,6 @@ li button:first-of-type {
     color: #4CAF50;
 }
 
-/* Animação */
 @keyframes fadeIn {
     from {
         opacity: 0;
